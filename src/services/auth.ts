@@ -136,9 +136,7 @@ export class AuthService {
    * Authenticates a user via Google OAuth profile
    * This method handles both existing users and new user creation
    */
-  public async authenticateGoogleUser(
-    googleProfile: GoogleUserProfile
-  ): Promise<{
+  public async authenticateGoogleUser(googleProfile: GoogleUserProfile): Promise<{
     token: string;
     user: Omit<User, 'hashedPassword' | 'createdAt' | 'updatedAt'>;
     isNewUser: boolean;
